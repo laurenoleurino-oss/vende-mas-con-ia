@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de Promos Rentables</title>
+<style>
+:root{ --ink:#16201E; --soft:#4A5754; --brand:#0D5C52; --brand-l:#E3F1EE; --accent:#F0643C; --accent-l:#FDEBE4; --sun:#F6C445; --sun-l:#FEF6DD; --line:#E4E0D8; --bg:#FAF7F2; --card:#fff; }
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --ink:#ECEFEE; --soft:#A9B5B2; --brand:#5FC4B3; --brand-l:#16332F; --accent:#FF8A63; --accent-l:#3A211A; --sun:#F6C445; --sun-l:#3A3218; --line:#2C3634; --bg:#0F1514; --card:#172020; } }
+*{ box-sizing:border-box; }
+body{ margin:0; background:var(--bg); color:var(--ink); font:16px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+header{ background:#0D5C52; color:#fff; padding:20px 16px 18px; }
+header small{ display:block; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; font-size:11px; opacity:.85; }
+header h1{ margin:4px 0 0; font-size:22px; line-height:1.15; }
+main{ max-width:560px; margin:0 auto; padding:16px; }
+.tabs{ display:flex; gap:6px; margin-bottom:14px; }
+.tabs button{ flex:1; border:1px solid var(--line); background:var(--card); color:var(--ink); padding:10px 6px; border-radius:10px; font-weight:700; font-size:14px; }
+.tabs button[aria-selected="true"]{ background:var(--brand); color:#fff; border-color:var(--brand); }
+.card{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px; margin-bottom:14px; }
+label{ display:block; font-weight:600; font-size:14px; margin:10px 0 4px; }
+label span{ display:block; font-weight:400; color:var(--soft); font-size:12.5px; }
+.in{ display:flex; align-items:center; border:1px solid var(--line); border-radius:10px; background:var(--sun-l); overflow:hidden; }
+.in i{ font-style:normal; padding:0 10px; color:var(--soft); font-weight:700; }
+.in input{ flex:1; min-width:0; border:0; background:transparent; color:var(--ink); padding:11px 10px; font-size:17px; font-weight:700; }
+.res{ display:flex; justify-content:space-between; gap:10px; padding:9px 0; border-bottom:1px dashed var(--line); font-size:15px; }
+.res:last-child{ border:0; }
+.res b{ white-space:nowrap; }
+.res.big b{ color:var(--brand); font-size:18px; }
+.verdict{ border-radius:12px; padding:14px; font-weight:700; font-size:16px; }
+.v-ok{ background:var(--brand-l); } .v-warn{ background:var(--sun-l); } .v-bad{ background:var(--accent-l); }
+.note{ font-size:12.5px; color:var(--soft); }
+[hidden]{ display:none !important; }
+</style>
+</head>
+<body>
+<header><small>Vendé Más con IA · Bono 2</small><h1>Calculadora de Promos Rentables</h1></header>
+<main>
+  <p class="note">Cambiá los números amarillos por los tuyos. Los que ya están son de un negocio simulado. Esta página no guarda ni envía tus datos: todo se calcula en tu celular.</p>
+  <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-t="d">Descuento</button>
+    <button role="tab" aria-selected="false" data-t="l">2x1 / 3x2</button>
+    <button role="tab" aria-selected="false" data-t="e">Envío gratis</button>
+  </div>
+
+  <section id="t-d">
+    <div class="card">
+      <label>Precio normal<span>Lo que cobrás hoy, sin promo</span></label><div class="in"><i>$</i><input id="d_p" inputmode="decimal" value="15900"></div>
+      <label>Costo del producto<span>Materiales o mercadería, por unidad</span></label><div class="in"><i>$</i><input id="d_c" inputmode="decimal" value="5200"></div>
+      <label>Otros gastos por venta<span>Packaging, bolsa, envío si lo pagás vos</span></label><div class="in"><i>$</i><input id="d_o" inputmode="decimal" value="600"></div>
+      <label>Comisión de tu medio de cobro<span>Buscala en tu cuenta. Efectivo o transferencia sin comisión: 0</span></label><div class="in"><i>%</i><input id="d_k" inputmode="decimal" value="7,61"></div>
+      <label>Descuento que querés hacer</label><div class="in"><i>%</i><input id="d_d" inputmode="decimal" value="15"></div>
+      <label>Ventas que hacés hoy en un período<span>Por semana o por mes, de este producto</span></label><div class="in"><i>#</i><input id="d_n" inputmode="numeric" value="20"></div>
+    </div>
+    <div class="card" id="d_out"></div>
+    <div class="verdict" id="d_v"></div>
+  </section>
+
+  <section id="t-l" hidden>
+    <div class="card">
+      <label>Precio de 1 unidad</label><div class="in"><i>$</i><input id="l_p" inputmode="decimal" value="8900"></div>
+      <label>Costo de 1 unidad</label><div class="in"><i>$</i><input id="l_c" inputmode="decimal" value="2500"></div>
+      <label>Otros gastos por pedido<span>Packaging, envío si lo pagás vos</span></label><div class="in"><i>$</i><input id="l_o" inputmode="decimal" value="600"></div>
+      <label>Comisión de tu medio de cobro</label><div class="in"><i>%</i><input id="l_k" inputmode="decimal" value="7,61"></div>
+      <label>Unidades que se lleva<span>2 en un 2x1, 3 en un 3x2</span></label><div class="in"><i>#</i><input id="l_x" inputmode="numeric" value="2"></div>
+      <label>Unidades que paga<span>1 en un 2x1, 2 en un 3x2</span></label><div class="in"><i>#</i><input id="l_y" inputmode="numeric" value="1"></div>
+      <label>Pedidos que hacés hoy en un período</label><div class="in"><i>#</i><input id="l_n" inputmode="numeric" value="20"></div>
+    </div>
+    <div class="card" id="l_out"></div>
+    <div class="verdict" id="l_v"></div>
+  </section>
+
+  <section id="t-e" hidden>
+    <div class="card">
+      <label>Monto mínimo para envío gratis</label><div class="in"><i>$</i><input id="e_t" inputmode="decimal" value="40000"></div>
+      <label>Costo de los productos de ese pedido<span>Lo que te cuesta lo que entra en un pedido típico de ese monto</span></label><div class="in"><i>$</i><input id="e_c" inputmode="decimal" value="13000"></div>
+      <label>Otros gastos del pedido</label><div class="in"><i>$</i><input id="e_o" inputmode="decimal" value="1200"></div>
+      <label>Comisión de tu medio de cobro</label><div class="in"><i>%</i><input id="e_k" inputmode="decimal" value="7,61"></div>
+      <label>Costo del envío que pagás vos</label><div class="in"><i>$</i><input id="e_s" inputmode="decimal" value="7500"></div>
+    </div>
+    <div class="card" id="e_out"></div>
+    <div class="verdict" id="e_v"></div>
+  </section>
+
+  <p class="note">No incluye impuestos (monotributo, ingresos brutos) ni gastos fijos (alquiler, publicidad). Si los querés considerar, sumá una parte en "otros gastos". Es una ayuda para decidir: la decisión es tuya.</p>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+// Acepta "15.900", "15900", "7,61" y "7.61"
+const parse = s => { s = String(s).trim().replace(/\s/g, '');
+  if (s.includes(',')) s = s.replace(/\./g, '').replace(',', '.');
+  else if (/^\d{1,3}(\.\d{3})+$/.test(s)) s = s.replace(/\./g, '');
+  const v = parseFloat(s); return isNaN(v) ? 0 : v; };
+const num = id => parse($(id).value);
+const pct = id => num(id) / 100;
+const money = v => (v < 0 ? '-$' : '$') + Math.abs(Math.round(v)).toLocaleString('es-AR');
+const per = v => (v * 100).toLocaleString('es-AR', {maximumFractionDigits: 1}) + ' %';
+const row = (t, v, big) => `<div class="res${big ? ' big' : ''}"><span>${t}</span><b>${v}</b></div>`;
+const verdict = (id, cls, txt) => { const el = $(id); el.className = 'verdict ' + cls; el.textContent = txt; };
+
+function calcD(){
+  const p = num('d_p'), c = num('d_c'), o = num('d_o'), k = pct('d_k'), d = pct('d_d'), n = num('d_n');
+  const g0 = p * (1 - k) - c - o, p1 = p * (1 - d), g1 = p1 * (1 - k) - c - o;
+  const need = g1 > 0 ? Math.ceil(n * g0 / g1) : null;
+  const dmax = 1 - (c + o) / (p * (1 - k));
+  $('d_out').innerHTML = row('Ganancia por venta sin promo', money(g0)) + row('Precio con la promo', money(p1)) +
+    row('Ganancia por venta con promo', money(g1), true) + row('Ganás menos por venta', money(g0 - g1)) +
+    row('Ventas necesarias para ganar lo mismo que hoy', need === null ? 'No se puede' : need, true) +
+    row('Descuento máximo antes de perder plata', per(dmax));
+  if (g1 <= 0) verdict('d_v', 'v-bad', '❌ Con este descuento PERDÉS plata en cada venta. Bajalo.');
+  else if (need / n > 1.5) verdict('d_v', 'v-warn', `⚠️ Te deja ganancia, pero necesitás vender ${Math.round((need / n - 1) * 100)} % más para ganar lo mismo. Pensalo bien.`);
+  else verdict('d_v', 'v-ok', `✅ Te deja ganancia. Necesitás vender ${Math.round((need / n - 1) * 100)} % más que hoy para ganar lo mismo.`);
+}
+function calcL(){
+  const p = num('l_p'), c = num('l_c'), o = num('l_o'), k = pct('l_k'), x = num('l_x'), y = num('l_y'), n = num('l_n');
+  const cobrado = p * y, gp = cobrado * (1 - k) - c * x - o, gn = p * (1 - k) - c - o;
+  const need = gp > 0 ? Math.ceil(n * gn / gp) : null;
+  $('l_out').innerHTML = row('Cobrás por un pedido con promo', money(cobrado)) + row('Ganancia de un pedido normal (1 unidad)', money(gn)) +
+    row('Ganancia de un pedido con promo', money(gp), true) + row('Es como un descuento de', per(x > 0 ? 1 - y / x : 0)) +
+    row('Pedidos con promo para ganar lo mismo que hoy', need === null ? 'No se puede' : need, true);
+  if (gp <= 0) verdict('l_v', 'v-bad', '❌ Con esta promo PERDÉS plata en cada pedido.');
+  else if (gp < gn) verdict('l_v', 'v-warn', `⚠️ Ganás menos por pedido: necesitás ${need} pedidos con promo para igualar ${n} normales.`);
+  else verdict('l_v', 'v-ok', '✅ Ganás igual o más por pedido que vendiendo 1 unidad.');
+}
+function calcE(){
+  const t = num('e_t'), c = num('e_c'), o = num('e_o'), k = pct('e_k'), s = num('e_s');
+  const g = t * (1 - k) - c - o - s, m = t > 0 ? g / t : 0;
+  $('e_out').innerHTML = row('Ganancia del pedido con envío gratis', money(g), true) + row('Margen sobre lo cobrado', per(m)) +
+    row('Si el envío lo pagara el cliente', money(g + s));
+  if (g <= 0) verdict('e_v', 'v-bad', '❌ En un pedido del monto mínimo PERDÉS plata. Subí el mínimo.');
+  else if (m < 0.15) verdict('e_v', 'v-warn', `⚠️ Te queda poco margen (${per(m)}). Considerá subir el mínimo.`);
+  else verdict('e_v', 'v-ok', `✅ Te queda ${per(m)} de margen en un pedido justo en el mínimo.`);
+}
+document.querySelectorAll('input').forEach(i => i.addEventListener('input', () => { calcD(); calcL(); calcE(); }));
+document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.tabs button').forEach(x => x.setAttribute('aria-selected', x === b));
+  ['d','l','e'].forEach(t => $('t-' + t).hidden = t !== b.dataset.t);
+}));
+calcD(); calcL(); calcE();
+</script>
+</body>
+</html>
