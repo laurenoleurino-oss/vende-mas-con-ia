@@ -251,7 +251,7 @@ window.VMIA = {
 };
 </script>
 <script>
-/* Píxel de Meta: se carga solo si hay ID. Registra PageView y ViewContent; InitiateCheckout al tocar «comprar». */
+/* Píxel de Meta: se carga solo si hay ID. Registra PageView y ViewContent; el checkout registra el resto. */
 (function(){
   var id = (window.VMIA || {}).metaPixelId;
   if (!id) return;
@@ -555,11 +555,9 @@ window.VMIA = {
     q.forEach(function(v, k){ if (/^utm_|^fbclid$/.test(k)) pasar.append(k, v); });
     if (pasar.toString()) destino += (destino.indexOf('?') < 0 ? '?' : '&') + pasar.toString();
   }
+  // InitiateCheckout y Purchase los registra el checkout de Impultienda con el mismo píxel (no duplicar acá).
   document.querySelectorAll('.js-buy').forEach(function(a){
     if (destino) { a.href = destino; }
-    a.addEventListener('click', function(){
-      if (window.fbq) fbq('track', 'InitiateCheckout', {value: C.precio, currency: 'ARS'});
-    });
   });
   // Cuenta regresiva SOLO si hay una fecha real de fin de lanzamiento.
   if (C.finLanzamiento) {
