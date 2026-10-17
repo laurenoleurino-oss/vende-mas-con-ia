@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vendé Más con IA · Tu mes de publicaciones y tus respuestas de WhatsApp en una tarde</title>
+<meta name="description" content="Completás una ficha de tu negocio, copiás 5 pedidos y la IA te escribe el calendario del mes, los textos y 15 respuestas de venta para WhatsApp, con tus precios y tu forma de hablar. Con IA gratis, desde el celular.">
+<meta property="og:title" content="Vendé Más con IA">
+<meta property="og:description" content="Tu mes de publicaciones planificado y escrito, y tus respuestas de venta para WhatsApp, en una tarde.">
+<meta property="og:image" content="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269796483_hero-mockup.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16201E; --soft:#4A5754; --mute:#7C8885;
+  --brand:#0D5C52; --brand-d:#083F38; --brand-l:#E3F1EE;
+  --accent:#F0643C; --accent-d:#D24E28; --accent-l:#FDEBE4;
+  --sun:#F6C445; --sun-l:#FEF6DD; --ok:#1E9E5A;
+  --cream:#FAF7F2; --line:#E4E0D8; --white:#fff;
+  --r:18px; --shadow:0 18px 40px rgba(8,40,36,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--white);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:84px}
+img{max-width:100%;height:auto;display:block}
+.hero-grid>*,.offer-grid>*,.bonus>*,.grid3>*,.hscroll>*,.steps>*,.compare>*,.benefits>*,.tests>*{min-width:0}
+html,body{overflow-x:hidden}
+[hidden]{display:none!important}
+.bimg img{width:100%;max-height:300px;object-fit:contain}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+.narrow{max-width:720px;margin:0 auto}
+h1,h2,h3{margin:0}
+.serif{font-family:Inter,system-ui,sans-serif;font-weight:800;letter-spacing:-.4px}
+.kicker{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--accent)}
+section{padding:56px 0}
+.sec-title{font-family:Inter,system-ui,sans-serif;font-weight:800;font-size:clamp(28px,6.4vw,42px);line-height:1.1;color:var(--brand-d);text-align:center;margin:8px auto 10px;max-width:760px}
+.sec-sub{text-align:center;color:var(--soft);max-width:640px;margin:0 auto 30px;font-size:17.5px}
+.center{text-align:center}
+
+/* 1 · Barra de urgencia */
+.topbar{position:sticky;top:0;z-index:50;background:var(--brand-d);color:#fff;font-size:13.5px;font-weight:700;text-align:center;padding:9px 12px;letter-spacing:.2px}
+.topbar b{color:var(--sun)}
+.topbar .cd{font-variant-numeric:tabular-nums;background:rgba(255,255,255,.12);padding:2px 8px;border-radius:6px;margin-left:6px}
+
+/* Botones */
+.btn{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;background:var(--accent);color:#fff;text-decoration:none;font-weight:800;font-size:18px;padding:18px 28px;border-radius:14px;box-shadow:0 10px 24px rgba(240,100,60,.35);transition:transform .15s, background .15s;width:100%;max-width:420px;text-align:center;line-height:1.2}
+.btn:hover{background:var(--accent-d);transform:translateY(-2px)}
+.btn small{display:block;font-weight:600;font-size:12.5px;opacity:.9}
+.btn-note{font-size:13.5px;color:var(--soft);margin-top:10px}
+
+/* 2 · Hero */
+.hero{background:radial-gradient(900px 500px at 80% 0%,rgba(246,196,69,.18),transparent 60%),radial-gradient(800px 600px at 0% 100%,rgba(56,190,160,.16),transparent 60%),var(--cream);padding:34px 0 40px}
+.hero-grid{display:grid;gap:26px;align-items:center;text-align:center;max-width:820px}
+.hero .lead{max-width:640px;margin-left:auto;margin-right:auto;text-wrap:balance}
+.hero .who{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:30px;padding:6px 14px;font-size:13.5px;font-weight:700;color:var(--brand)}
+.hero h1{font-family:Inter,system-ui,sans-serif;font-weight:800;font-size:clamp(32px,8.2vw,52px);line-height:1.1;letter-spacing:-1.2px;color:var(--brand-d);margin:16px 0 14px;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--accent-d)}  /* coral oscuro: contraste 4:1 sobre el crema (texto grande: mínimo 3:1) */
+.hero .lead{font-size:18.5px;color:var(--soft);margin:0 0 18px}
+.hero .lead b{color:var(--ink)}
+.hero-img{border-radius:var(--r);margin:0 auto;max-width:600px;width:100%}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px}
+.trust div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 8px;text-align:center;font-size:13px;font-weight:700;line-height:1.25}
+.trust i{display:flex;align-items:center;justify-content:center;width:38px;height:38px;margin:0 auto 6px;border-radius:50%;background:var(--brand-l);font-style:normal;font-size:19px}
+@media (max-width:560px){.trust{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:900px){.hero{padding:56px 0}}
+
+/* 3 · Dolores */
+.pains{display:grid;gap:12px;max-width:720px;margin:0 auto}
+.pain{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-size:17px}
+.pain .ar{flex:none;display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--accent-l);color:var(--accent);font-weight:800}
+.pain-close{max-width:720px;margin:20px auto 0;text-align:center;font-size:18px;font-weight:700;color:var(--brand)}
+
+/* 4 · Galerías */
+.gal-intro{background:var(--brand-l)}
+.cat{margin:36px 0 0}
+.cat-h{display:flex;align-items:baseline;justify-content:center;gap:12px;margin-bottom:6px}
+.cat-h .n{font-family:Inter,system-ui,sans-serif;font-weight:800;font-size:30px;color:var(--accent);line-height:1}
+.cat-h h3{font-size:22px;font-weight:800;color:var(--brand-d)}
+.cat p{margin:0 auto 14px;color:var(--soft);text-align:center;max-width:640px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.grid3 img,.hscroll img{border-radius:16px;box-shadow:var(--shadow);background:#fff}
+@media (max-width:680px){.grid3{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}.grid3 img{scroll-snap-align:start}}
+.hscroll{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,30%);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}
+.hscroll img{scroll-snap-align:start}
+@media (max-width:680px){.hscroll{grid-auto-columns:78%}}
+.swipe{font-size:13px;color:var(--mute);margin-top:4px}
+.gal-note{margin-top:26px;text-align:center;font-size:13.5px;color:var(--mute)}
+
+/* Cómo funciona */
+.steps{display:grid;gap:14px;grid-template-columns:repeat(3,1fr)}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px 18px;text-align:center}
+.step b.num{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;font-size:20px;margin-bottom:10px}
+.step h3{font-size:19px;color:var(--brand-d);margin-bottom:6px}
+.step p{margin:0;color:var(--soft);font-size:15.5px}
+@media (max-width:760px){.steps{grid-template-columns:1fr}}
+
+/* 5 · Beneficios */
+.benefits{display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}
+.benefit{display:flex;gap:16px;align-items:flex-start;background:var(--cream);border-radius:var(--r);padding:20px}
+.benefit .ic{flex:none;width:52px;height:52px;border-radius:14px;background:#fff;box-shadow:0 6px 14px rgba(8,40,36,.08);display:flex;align-items:center;justify-content:center;font-size:26px}
+.benefit h3{font-size:18.5px;color:var(--brand-d);margin-bottom:4px}
+.benefit p{margin:0;color:var(--soft);font-size:15.5px}
+@media (max-width:760px){.benefits{grid-template-columns:1fr}}
+
+/* Comparación */
+.compare{display:grid;gap:14px;grid-template-columns:repeat(3,1fr)}
+.col{border:1px solid var(--line);border-radius:var(--r);padding:22px 20px;background:#fff}
+.col h3{font-size:18px;margin-bottom:12px}
+.col ul{list-style:none;margin:0;padding:0;font-size:15.5px}
+.col li{padding:7px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px}
+.col li:last-child{border:0}
+.x{color:#C2441F;font-weight:800}.v{color:var(--ok);font-weight:800}
+.col.win{border:2px solid var(--brand);background:var(--brand-l);position:relative}
+.col.win .tag{position:absolute;top:-13px;left:20px;background:var(--brand);color:#fff;font-size:12px;font-weight:800;letter-spacing:1px;padding:4px 10px;border-radius:20px}
+@media (max-width:760px){.compare{grid-template-columns:1fr}}
+
+/* 6 · Oferta */
+.offer{background:linear-gradient(180deg,var(--cream),#fff)}
+.offer-grid{display:grid;gap:18px;grid-template-columns:1fr 1fr;align-items:stretch}
+@media (max-width:820px){.offer-grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow)}
+.pcard img{border-radius:16px;background:var(--cream)}
+.pcard h3{font-family:Inter,system-ui,sans-serif;font-weight:800;font-size:26px;color:var(--brand-d);margin:14px 0 6px}
+.pcard .tested{display:inline-flex;gap:6px;align-items:center;font-size:13.5px;font-weight:700;color:var(--brand);background:var(--brand-l);padding:5px 12px;border-radius:30px}
+.incl{list-style:none;padding:0;margin:14px 0 0;font-size:15.5px}
+.incl li{padding:6px 0;display:flex;gap:10px}
+.incl li::before{content:"✓";color:var(--ok);font-weight:800}
+.price-old{color:var(--mute);font-size:18px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:10px}
+.price-old s{text-decoration-thickness:2px}
+.off-badge{display:inline-block;background:var(--accent);color:#fff;font-size:14px;font-weight:800;letter-spacing:.5px;padding:4px 10px;border-radius:20px;text-decoration:none}
+/* Entrada suave de tarjetas al hacer scroll (solo si hay JS y no se pidió reducir movimiento) */
+.js-reveal .reveal{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease}
+.js-reveal .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js-reveal .reveal{opacity:1;transform:none;transition:none}}
+.price{font-family:Inter,system-ui,sans-serif;font-weight:800;font-size:52px;font-weight:700;color:var(--brand-d);line-height:1;margin:6px 0}
+.price small{font-family:Inter,sans-serif;font-size:15px;color:var(--soft);font-weight:600}
+.ucard{display:flex;flex-direction:column;gap:14px;justify-content:center;text-align:center;border:2px solid var(--accent)}
+.ucard .launch{display:inline-block;align-self:center;background:var(--accent-l);color:var(--accent-d);font-weight:800;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:6px 14px;border-radius:30px}
+.count{display:flex;justify-content:center;gap:10px}
+.count div{background:var(--brand-d);color:#fff;border-radius:12px;min-width:66px;padding:10px 6px}
+.count b{display:block;font-size:28px;font-variant-numeric:tabular-nums;line-height:1}
+.count span{font-size:11px;letter-spacing:1px;text-transform:uppercase;opacity:.8}
+.pay{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px;font-size:14px;font-weight:700;color:var(--soft)}
+.pay span{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:30px;padding:7px 14px}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--brand-l);color:var(--brand-d);font-weight:800;border-radius:40px;padding:10px 18px;font-size:15px}
+.pill-wrap{text-align:center;margin-top:16px}
+
+/* 7 · Bonos */
+.bonus{display:grid;grid-template-columns:1fr 1.25fr;gap:22px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;margin:16px auto;max-width:920px;box-shadow:var(--shadow)}
+.bonus:nth-child(even){grid-template-columns:1.25fr 1fr}
+.bonus:nth-child(even) .bimg{order:2}
+.bimg{border-radius:16px;overflow:hidden;background:var(--cream)}
+.bonus .bn{font-size:12.5px;font-weight:800;letter-spacing:1.4px;color:var(--accent);text-transform:uppercase}
+.bonus h3{font-family:Inter,system-ui,sans-serif;font-weight:800;font-size:25px;color:var(--brand-d);margin:4px 0 8px;line-height:1.15}
+.bonus p{margin:0 0 10px;color:var(--soft);font-size:15.5px}
+.free{display:inline-block;background:#E5F6EC;color:var(--ok);font-weight:800;font-size:13.5px;padding:5px 12px;border-radius:20px}
+@media (max-width:700px){.bonus,.bonus:nth-child(even){grid-template-columns:1fr}.bonus:nth-child(even) .bimg{order:0}}
+.allfree{display:block;max-width:620px;margin:22px auto 0;text-align:center;background:var(--sun-l);border:2px dashed var(--sun);color:#6A4D00;font-weight:800;border-radius:40px;padding:14px 20px;font-size:17px}
+
+/* 8 · Pruebas */
+.tests{display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}
+.test{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.test .head{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.test .av{flex:none;width:64px;height:64px;border-radius:50%;object-fit:cover;background:var(--line);box-shadow:0 0 0 3px #fff,0 4px 12px rgba(8,40,36,.18)}
+.tests-note{margin:18px auto 0;text-align:center;font-size:13px;color:var(--mute)}
+.test .head b{display:block;font-size:16.5px}
+.test .head small{color:var(--mute);font-size:13px}
+.test q{display:block;font-size:15.5px;color:var(--ink);quotes:none;background:var(--cream);border-radius:12px;padding:12px 14px;margin:8px 0}
+.test .res{font-size:14.5px;color:var(--soft)}
+.badge-sim{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.8px;color:#4E46A8;background:#EEEDFB;border-radius:20px;padding:3px 10px;margin-top:4px}
+@media (max-width:760px){.tests{grid-template-columns:1fr}}
+
+/* 9 · FAQ */
+.faq{max-width:760px;margin:0 auto}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;margin:10px 0;padding:0 18px}
+summary{cursor:pointer;list-style:none;font-weight:800;font-size:17px;padding:18px 32px 18px 0;position:relative;color:var(--brand-d)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:14px;font-size:24px;color:var(--accent);font-weight:700}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 18px;color:var(--soft);font-size:16px}
+
+/* 10 · Garantía + cierre */
+.guarantee{display:flex;gap:18px;align-items:center;max-width:760px;margin:0 auto;background:var(--brand-l);border:2px solid var(--brand);border-radius:22px;padding:22px}
+.seal{flex:none;width:96px;height:96px;border-radius:50%;background:var(--brand);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;line-height:1;box-shadow:0 0 0 6px #fff,0 0 0 8px var(--brand)}
+.seal b{font-size:34px}.seal span{font-size:11px;letter-spacing:1px}
+.guarantee h3{font-family:Inter,system-ui,sans-serif;font-weight:800;font-size:24px;color:var(--brand-d);margin-bottom:4px}
+.guarantee p{margin:0;color:var(--soft)}
+@media (max-width:560px){.guarantee{flex-direction:column;text-align:center}}
+.final{background:var(--brand-d);color:#fff;text-align:center;border-radius:28px;padding:44px 22px;margin-top:40px}
+.final h2{font-family:Inter,system-ui,sans-serif;font-weight:800;font-size:clamp(28px,6vw,40px);line-height:1.12;margin-bottom:12px}
+.final p{color:#CFE7E1;max-width:600px;margin:0 auto 22px}
+footer{padding:30px 0 20px;color:var(--mute);font-size:13px;text-align:center}
+footer p{max-width:760px;margin:6px auto}
+
+/* Barra de compra fija */
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(8,40,36,.10);padding:10px 14px;display:flex;align-items:center;gap:12px;justify-content:center}
+.buybar .t{font-size:13px;line-height:1.25}
+.buybar .t b{display:block;font-size:17px;color:var(--brand-d)}
+.buybar .btn{width:auto;padding:13px 20px;font-size:16px;box-shadow:none}
+
+/* Qué queda listo / qué hacés vos */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.split-col{border-radius:var(--r);padding:18px 20px}
+.split-col h3{font-size:17px;margin-bottom:8px;color:var(--brand-d)}
+.split-col ul{margin:0;padding-left:18px;font-size:15.5px;color:var(--soft)}
+.split-col li{margin:4px 0}
+.split-col.ok{background:var(--brand-l)}
+.split-col.you{background:var(--cream);border:1px solid var(--line)}
+@media (max-width:760px){.split{grid-template-columns:1fr}}
+
+/* Galerías en movimiento (cinta) */
+.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);padding:6px 0 16px}
+.marquee .mq-track{display:flex;width:max-content;animation:mq-izq var(--mq-dur,60s) linear infinite;will-change:transform}
+.marquee.a-derecha .mq-track{animation-name:mq-der}
+.marquee .mq-track img{flex:none;width:clamp(240px,62vw,320px);height:auto;margin-right:14px;border-radius:16px;box-shadow:var(--shadow);background:#fff}
+.marquee:hover .mq-track,.marquee.tocando .mq-track{animation-play-state:paused}
+@keyframes mq-izq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes mq-der{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.marquee ~ .swipe{display:none}
+@media (prefers-reduced-motion:reduce){.marquee{overflow-x:auto;-webkit-mask-image:none;mask-image:none}.marquee .mq-track{animation:none}.marquee ~ .swipe{display:block}}
+/* Accesibilidad, controles de movimiento y zonas seguras de celular. */
+:focus-visible{outline:3px solid var(--brand);outline-offset:4px}
+.btn:focus-visible{outline-color:var(--brand-d)}
+section[id]{scroll-margin-top:72px}
+.buybar{padding-bottom:calc(10px + env(safe-area-inset-bottom,0px))}
+body{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+.motion-toggle{display:block;margin:12px auto 0;padding:10px 16px;min-height:44px;border:1px solid var(--brand);border-radius:10px;background:#fff;color:var(--brand-d);font:inherit;font-size:14px;cursor:pointer}
+.marquee.pausada .mq-track,.marquee.fuera-vista .mq-track{animation-play-state:paused}
+@media(max-width:360px){.wrap{padding:0 14px}.hero h1{letter-spacing:-.7px}.btn{padding:16px 18px}.cat-h{align-items:center}.cat-h h3{font-size:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<!-- ═════════ CONFIGURACIÓN (cambiá solo esto) ═════════ -->
+<script>
+window.VMIA = {
+  // Link del checkout de Impultienda. Mientras esté vacío, los botones llevan a la oferta (#oferta).
+  checkoutUrl: "https://vendemasconia.impultienda.ar/checkout/vende-mas-con-ia-lanzamiento",
+  precio: 19990,
+  // Precio tachado: dejalo en 0 salvo que sea el precio REAL que va a tener después del lanzamiento.
+  precioRegular: 39980,
+  // Fecha y hora REAL en que termina el precio de lanzamiento (formato 2026-11-15T23:59:00-03:00).
+  // Si la dejás vacía, no se muestra cuenta regresiva (no se usa urgencia falsa).
+  finLanzamiento: "",
+  // ID del Píxel de Meta (solo números, lo ves en Administrador de eventos). Vacío = sin píxel.
+  metaPixelId: ""
+};
+</script>
+<script>
+/* Píxel de Meta: se carga solo si hay ID. Registra PageView y ViewContent; InitiateCheckout al tocar «comprar». */
+(function(){
+  var id = (window.VMIA || {}).metaPixelId;
+  if (!id) return;
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', id);
+  fbq('track', 'PageView');
+  fbq('track', 'ViewContent', {content_name: 'Vendé Más con IA', value: window.VMIA.precio, currency: 'ARS'});
+})();
+</script>
+
+<!-- 1 · BARRA DE URGENCIA -->
+<div class="topbar" id="topbar">⚡ <b>Precio de lanzamiento</b> · Vendé Más con IA<span class="cd" id="cd-top" hidden></span></div>
+
+<!-- 2 · HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="who">🛍️ Para emprendedoras y emprendedores que venden por Instagram y WhatsApp</span>
+      <h1>Prepará <em>un mes de contenido</em> y respuestas de WhatsApp <em>en una sola tarde</em> con IA gratis</h1>
+      <p class="lead">Calendario mensual, hasta 20&nbsp;publicaciones con sus textos, guiones de reels y 15&nbsp;respuestas de WhatsApp listas para usar, adaptadas a tu negocio.</p>
+      <a class="btn js-buy" href="#oferta">Quiero mi mes resuelto <small>Acceso inmediato · AR$ <span class="js-price">19.990</span></small></a>
+      <div class="btn-note"><b>Ebook de 45 páginas + 10 videos cortos + 5 bonos</b><br>Pago único · Garantía de 7 días</div>
+    </div>
+    <div>
+      <img class="hero-img" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269796483_hero-mockup.webp" alt="Ebook Vendé Más con IA, bonos y un celular con el calendario del mes" width="1000" height="860">
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="trust">
+      <div><i>⚡</i>Acceso inmediato</div>
+      <div><i>📱</i>Se hace desde el celular</div>
+      <div><i>🤖</i>Con IA gratis</div>
+      <div><i>🛡️</i>Garantía de 7 días</div>
+    </div>
+  </div>
+</header>
+
+<!-- 3 · DOLORES -->
+<section>
+  <div class="wrap">
+    <div class="center"><span class="kicker">¿Esto te pasa a vos?</span></div>
+    <h2 class="sec-title">Vender por redes se volvió un segundo trabajo</h2>
+    <div class="pains">
+      <div class="pain"><span class="ar">➜</span><span>Abrís Instagram, mirás la pantalla en blanco y <b>no sabés qué publicar hoy</b>. Y mañana tampoco.</span></div>
+      <div class="pain"><span class="ar">➜</span><span>Le pediste textos a la IA y te devolvió <b>frases de folleto</b>, con precios y promos que nunca dijiste.</span></div>
+      <div class="pain"><span class="ar">➜</span><span>Contestás veinte veces por día "¿precio?", "¿hacen envíos?", "¿tenés talle?" y <b>se te van las horas en el chat</b>.</span></div>
+      <div class="pain"><span class="ar">➜</span><span>Querés hacer una promo, pero <b>no sabés si te deja ganancia</b> o te hace perder plata.</span></div>
+      <div class="pain"><span class="ar">➜</span><span>No te alcanza para pagarle a una community manager, y publicar "cuando podés" <b>no te trae consultas</b>.</span></div>
+    </div>
+    <p class="pain-close">No te falta creatividad. Te falta un sistema que piense y escriba con vos.</p>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA (mejora) -->
+<section>
+  <div class="wrap">
+    <div class="center"><span class="kicker">Así de simple</span></div>
+    <h2 class="sec-title">Tres pasos, una tarde</h2>
+    <div class="steps">
+      <div class="step"><b class="num">1</b><h3>Completás tu ficha</h3><p>18 datos de tu negocio: productos, precios, forma de hablar, envíos y fechas. En 10 a 20 minutos.</p></div>
+      <div class="step"><b class="num">2</b><h3>Copiás 5 pedidos</h3><p>En ChatGPT o Gemini gratis, en orden. La IA escribe el mes con tus datos, sin inventar.</p></div>
+      <div class="step"><b class="num">3</b><h3>Revisás y publicás</h3><p>Guardás los textos en tus notas, sacás las fotos y cargás tus 15 respuestas de WhatsApp.</p></div>
+    </div>
+    <div class="split">
+      <div class="split-col ok"><h3>✅ Queda listo en la tarde</h3><ul>
+        <li>El plan del mes: qué publicar cada día y para qué</li>
+        <li>El texto completo de cada publicación</li>
+        <li>Guiones de reels e ideas de historias</li>
+        <li>Descripciones de tus productos</li>
+        <li>Tus 15 respuestas de WhatsApp</li></ul></div>
+      <div class="split-col you"><h3>📸 Lo hacés vos, más rápido</h3><ul>
+        <li>Sacar las fotos y filmar los reels</li>
+        <li>Diseñar las placas (te enseñamos con Canva gratis)</li>
+        <li>Subir o programar cada publicación</li>
+        <li>Responder a cada cliente con tus atajos</li>
+        <li>Completar los datos que la IA te marca</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · GALERÍAS POR CATEGORÍA -->
+<section class="gal-intro">
+  <div class="wrap">
+    <div class="center"><span class="kicker">Lo que vas a tener en la mano</span></div>
+    <h2 class="sec-title">Mirá lo que escribe la IA con este método</h2>
+    <p class="sec-sub">No te mostramos promesas: estas son respuestas reales de ChatGPT gratis, en las pruebas que hicimos con el método antes de lanzarlo.</p>
+
+    <div class="cat">
+      <div class="cat-h"><span class="n">01</span><h3>Tu calendario del mes</h3></div>
+      <p>Qué publicar cada día, con un objetivo claro: atraer, conectar o vender. A la medida de cuántas veces por semana podés publicar.</p>
+      <div class="grid3">
+        <img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269782021_gal-calendario-1.webp" alt="Calendario de la semana con publicaciones para vender, atraer y conectar" width="640" height="640">
+        <img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269783112_gal-calendario-2.webp" alt="Ideas del mes calculadas según 4 publicaciones por semana" width="640" height="640">
+        <img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269784112_gal-calendario-3.webp" alt="Fechas comerciales y feriados sin inventar fechas" width="640" height="640">
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-h"><span class="n">02</span><h3>Los textos, listos para copiar</h3></div>
+      <p>Cada publicación con su primera línea que frena, el desarrollo y una sola acción clara. Más historias y guiones de reels sin mostrar la cara.</p>
+      <div class="grid3">
+        <img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269790091_gal-textos-1.webp" alt="Texto de un carrusel para una tienda de ropa" width="640" height="640">
+        <img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269791198_gal-textos-2.webp" alt="Texto de un carrusel para un negocio de viandas" width="640" height="640">
+        <img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269792233_gal-textos-3.webp" alt="Secuencia de historias para un servicio de pestañas" width="640" height="640">
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-h"><span class="n">03</span><h3>Tus respuestas de WhatsApp</h3></div>
+      <p>15 respuestas para las consultas de siempre, que se guardan como atajos. No inventan promos ni prometen lo que no podés cumplir.</p>
+      <div class="grid3">
+        <img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269793130_gal-whatsapp-1.webp" alt="Respuesta de WhatsApp que rechaza un 2x1 inexistente" width="640" height="640">
+        <img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269794206_gal-whatsapp-2.webp" alt="Respuesta de WhatsApp que no suma descuentos" width="640" height="640">
+        <img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269795321_gal-whatsapp-3.webp" alt="Respuesta de WhatsApp que marca un dato a completar" width="640" height="640">
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-h"><span class="n">04</span><h3>Adaptado a tu rubro</h3></div>
+      <p>Lo probamos en 5 rubros. Cada uno trae un "agregado" para pegar en tu ficha.</p>
+      <div class="hscroll">
+        <img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269785187_gal-rubro-1.webp" alt="Rubro ropa" width="640" height="640">
+        <img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269786043_gal-rubro-2.webp" alt="Rubro cosmética" width="640" height="640">
+        <img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269786882_gal-rubro-3.webp" alt="Rubro gastronomía" width="640" height="640">
+        <img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269787741_gal-rubro-4.webp" alt="Rubro accesorios" width="640" height="640">
+        <img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269789244_gal-rubro-5.webp" alt="Rubro servicios" width="640" height="640">
+      </div>
+      <div class="swipe">Deslizá para ver los 5 rubros →</div>
+    </div>
+    <p class="gal-note">Ejemplos generados con ChatGPT gratis durante las pruebas del método, con negocios simulados. Los resultados pueden variar según tu negocio y la herramienta.</p>
+  </div>
+</section>
+
+<!-- 5 · BENEFICIOS -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="center"><span class="kicker">Con esto vas a lograr</span></div>
+    <h2 class="sec-title">Dejar de improvisar y empezar a vender con orden</h2>
+    <div class="benefits">
+      <div class="benefit"><span class="ic">📅</span><div><h3>Saber qué publicar cada día</h3><p>Un mes completo planificado, con objetivo en cada publicación. Chau pantalla en blanco.</p></div></div>
+      <div class="benefit"><span class="ic">✍️</span><div><h3>Textos que suenan a vos</h3><p>Con tus productos, tus precios y tus palabras. Sin "calidad premium" ni frases de folleto.</p></div></div>
+      <div class="benefit"><span class="ic">💬</span><div><h3>Responder WhatsApp más rápido</h3><p>15 respuestas listas como atajos para el "¿precio?", el "está caro" y el "lo pienso".</p></div></div>
+      <div class="benefit"><span class="ic">🧮</span><div><h3>Promos que no te hacen perder plata</h3><p>Calculás cada descuento antes de publicarlo y sabés cuánto te queda por venta.</p></div></div>
+      <div class="benefit"><span class="ic">⏱️</span><div><h3>Recuperar tu tiempo</h3><p>El mes se escribe en una tarde. Después, un rato por semana para sostenerlo.</p></div></div>
+      <div class="benefit"><span class="ic">🛡️</span><div><h3>Usar la IA sin miedo</h3><p>Paso a paso, desde el celular, con reglas para que no invente datos de tu negocio.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARACIÓN (mejora) -->
+<section style="background:var(--cream)">
+  <div class="wrap">
+    <div class="center"><span class="kicker">Tres caminos</span></div>
+    <h2 class="sec-title">¿Cómo querés resolver tus redes?</h2>
+    <div class="compare">
+      <div class="col"><h3>Pagar una community manager</h3><ul><li><span class="x">✕</span>Un costo mensual fijo</li><li><span class="x">✕</span>Tenés que explicarle tu negocio</li><li><span class="x">✕</span>No te responde el WhatsApp</li></ul></div>
+      <div class="col"><h3>Usar la IA "a ojo"</h3><ul><li><span class="x">✕</span>Textos genéricos de folleto</li><li><span class="x">✕</span>Inventa precios y promos</li><li><span class="x">✕</span>Cada vez empezás de cero</li></ul></div>
+      <div class="col win"><span class="tag">EL CAMINO CORTO</span><h3>Vendé Más con IA</h3><ul><li><span class="v">✓</span>Un pago único, IA gratis</li><li><span class="v">✓</span>Escribe con tus datos reales</li><li><span class="v">✓</span>Mes + WhatsApp, en una tarde</li></ul></div>
+    </div>
+    <div class="center" style="margin-top:26px"><a class="btn js-buy" href="#oferta">Elijo el camino corto</a></div>
+  </div>
+</section>
+
+<!-- 6 · OFERTA -->
+<section class="offer" id="oferta">
+  <div class="wrap">
+    <div class="center"><span class="kicker">Todo lo que recibís hoy</span></div>
+    <h2 class="sec-title">Tu sistema completo para vender con IA</h2>
+    <div class="offer-grid">
+      <div class="card pcard">
+        <img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269797659_producto.webp" alt="Ebook Vendé Más con IA" width="760" height="620">
+        <span class="tested">✔ Probado en 5 rubros con ChatGPT gratis</span>
+        <h3>Vendé Más con IA</h3>
+        <ul class="incl">
+          <li>Ebook práctico de 45 páginas, pensado para leer en el celular</li>
+          <li>10 videos cortos (menos de 1 minuto y medio cada uno) que te muestran cada paso en pantalla</li>
+          <li>Tu ficha de negocio + los 5 pedidos listos para copiar</li>
+          <li>15 respuestas de venta para WhatsApp</li>
+          <li>Ejemplos y agregados para 5 rubros</li>
+          <li>5 bonos incluidos (los ves abajo)</li>
+        </ul>
+      </div>
+      <div class="card ucard">
+        <span class="launch">Precio de lanzamiento</span>
+        <div class="count" id="count" hidden>
+          <div><b id="c-d">0</b><span>días</span></div><div><b id="c-h">00</b><span>horas</span></div><div><b id="c-m">00</b><span>min</span></div><div><b id="c-s">00</b><span>seg</span></div>
+        </div>
+        <div>
+          <div class="price-old" id="price-old" hidden><s>AR$ <span id="price-reg"></span></s><span class="off-badge" id="off-badge"></span></div>
+          <div class="price">AR$ <span class="js-price">19.990</span></div>
+          <small style="color:var(--soft);font-weight:600">Pago único · Sin suscripciones · IA gratis</small>
+        </div>
+        <a class="btn js-buy" href="#oferta" style="align-self:center">Quiero mi mes resuelto <small>Acceso inmediato por mail</small></a>
+        <div style="font-size:14px;color:var(--soft)">Probalo 7 días: si no te sirve, te devolvemos el 100&nbsp;%.</div>
+      </div>
+    </div>
+    <div class="pay">
+      <span><i class="dot" style="background:#1A1F71"></i>Visa</span>
+      <span><i class="dot" style="background:linear-gradient(90deg,#EB001B 50%,#F79E1B 50%)"></i>Mastercard</span>
+      <span><i class="dot" style="background:#00B1EA"></i>Mercado Pago</span>
+      <span>🔒 Pago seguro</span>
+    </div>
+    <div class="pill-wrap"><span class="pill">🛡️ Garantía de 7 días · Te devolvemos el 100&nbsp;%</span></div>
+  </div>
+</section>
+
+<!-- 7 · BONOS -->
+<section>
+  <div class="wrap">
+    <div class="center"><span class="kicker">Regalos para tu negocio</span></div>
+    <h2 class="sec-title">Además, hoy te llevás regalos exclusivos</h2>
+    <p class="sec-sub">Herramientas que completan el método: para que tus promos te dejen ganancia, tu WhatsApp trabaje ordenado y ninguna fecha te agarre desprevenida.</p>
+    <div>
+      <div class="bonus"><div class="bimg"><img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269776729_bono-1.webp" alt="Bono WhatsApp Business Listo" width="620" height="460"></div><div><span class="bn">Regalo 1</span><h3>WhatsApp Business Listo</h3><p>Perfil, catálogo, mensaje de bienvenida y de ausencia, respuestas rápidas, etiquetas y tu link directo. Paso a paso.</p><span class="free">Incluido gratis</span></div></div>
+      <div class="bonus"><div class="bimg"><img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269778150_bono-2.webp" alt="Bono Calculadora de Promos Rentables" width="620" height="460"></div><div><span class="bn">Regalo 2</span><h3>Calculadora de Promos Rentables</h3><p>Planilla y versión para el celular: descuento, 2x1 o envío gratis. Te dice cuánto ganás y si la promo te conviene.</p><span class="free">Incluido gratis</span></div></div>
+      <div class="bonus"><div class="bimg"><img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269778935_bono-3.webp" alt="Bono Calendario Comercial Argentino" width="620" height="460"></div><div><span class="bn">Regalo 3</span><h3>Calendario Comercial Argentino</h3><p>Las fechas que venden y los feriados de noviembre 2026 a diciembre 2027, con ideas por rubro y cuándo empezar a avisar.</p><span class="free">Incluido gratis</span></div></div>
+      <div class="bonus"><div class="bimg"><img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269779735_bono-4.webp" alt="Bono Prompts de Emergencia" width="620" height="460"></div><div><span class="bn">Regalo 4</span><h3>Prompts de Emergencia</h3><p>14 pedidos para resolver en minutos una mala reseña, un aumento de precios, la falta de stock o un cliente enojado.</p><span class="free">Incluido gratis</span></div></div>
+      <div class="bonus"><div class="bimg"><img loading="lazy" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269780524_bono-5.webp" alt="Bono Kit de Seguimiento de Clientes" width="620" height="460"></div><div><span class="bn">Regalo 5</span><h3>Kit de Seguimiento de Clientes</h3><p>12 mensajes y una planilla para retomar consultas, pedir reseñas y volver a venderle a quien ya te compró, sin ser insistente.</p><span class="free">Incluido gratis</span></div></div>
+    </div>
+    <span class="allfree">🎁 Y todo esto hoy viene incluido con tu compra</span>
+    <div class="center" style="margin-top:22px"><a class="btn js-buy" href="#oferta">Quiero el método + los 5 regalos</a></div>
+  </div>
+</section>
+
+<!-- 8 · PRUEBAS (en lugar de testimonios inventados) -->
+<section style="background:var(--cream)">
+  <div class="wrap">
+    <div class="center"><span class="kicker">Antes de venderlo, lo probamos</span></div>
+    <h2 class="sec-title">Lo pusimos a prueba en 5 rubros distintos</h2>
+    <p class="sec-sub">Armamos negocios de prueba con datos realistas y corrimos el método completo en ChatGPT gratis. Esto es lo que pasó.</p>
+    <!-- Cuando tengas reseñas REALES de compradoras (con su permiso), agregalas acá con foto, nombre y ciudad. -->
+    <div class="tests">
+      <div class="test"><div class="head"><img class="av" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269798325_resena-1-rosario.webp" alt="" width="64" height="64" loading="lazy"><div><b>Lupe Ropa · Rosario</b><small>Ropa femenina · 3 publicaciones por semana</small><br><span class="badge-sim">NEGOCIO DE PRUEBA</span></div></div><q>"2x1 no tengo, pero sí tenés 10% off pagando por transferencia."</q><div class="res">12 de 12 publicaciones escritas. Rechazó una promo que no existía y avisó que un envío no llegaba a tiempo.</div></div>
+      <div class="test"><div class="head"><img class="av" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269798915_resena-2-cordoba.webp" alt="" width="64" height="64" loading="lazy"><div><b>Raíz Cosmética · Córdoba</b><small>Cosmética natural · datos incompletos</small><br><span class="badge-sim">NEGOCIO DE PRUEBA</span></div></div><q>"El sérum es un cosmético; no puedo prometerte que cure el acné."</q><div class="res">Sin promesas médicas. Donde faltaban datos de envío, marcó [COMPLETAR] en vez de inventar.</div></div>
+      <div class="test"><div class="head"><img class="av" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269799622_resena-3-caba.webp" alt="" width="64" height="64" loading="lazy"><div><b>La Viandería · CABA</b><small>Viandas · 5 publicaciones por semana</small><br><span class="badge-sim">NEGOCIO DE PRUEBA</span></div></div><q>"El 10% off es para el primer pedido del pack de 10; no tenemos otro descuento por efectivo."</q><div class="res">20 de 20 publicaciones con el cierre de pedidos del jueves. No sumó descuentos.</div></div>
+      <div class="test"><div class="head"><img class="av" src="https://aekpgsbqjzqntlbucbts.supabase.co/storage/v1/object/public/store-resources/ceefa45f-fc35-48f1-b603-04e51d2a0a7d/1792269800219_resena-4-laplata.webp" alt="" width="64" height="64" loading="lazy"><div><b>Estudio Bruma · La Plata</b><small>Uñas y pestañas · no filma reels</small><br><span class="badge-sim">NEGOCIO DE PRUEBA</span></div></div><q>"Para reservar el turno pido una seña; el monto es [COMPLETAR]."</q><div class="res">Adaptó todo a turnos y señas. No inventó montos ni confirmó turnos.</div></div>
+    </div>
+    <p class="tests-note">Fotos ilustrativas generadas con IA. Son negocios de prueba, no clientas reales.</p>
+  </div>
+</section>
+
+<!-- 9 · FAQ -->
+<section>
+  <div class="wrap">
+    <div class="center"><span class="kicker">Preguntas frecuentes</span></div>
+    <h2 class="sec-title">Lo que seguro te estás preguntando</h2>
+    <div class="faq">
+      <details><summary>¿Me sirve si nunca usé ChatGPT?</summary><p>Sí. Está pensado para eso: te explica cómo abrir la IA desde el celular, qué copiar, dónde pegarlo y qué hacer con la respuesta. Y los videos te muestran cada paso en pantalla.</p></details>
+      <details><summary>¿Tengo que pagar alguna IA o herramienta?</summary><p>No. Funciona con las versiones gratis de ChatGPT o Gemini, Canva y WhatsApp Business. Algunas te piden crear una cuenta gratis (por ejemplo, Gemini y Canva). Las versiones gratis tienen límites de uso: el libro te dice qué hacer si llegás a uno.</p></details>
+      <details><summary>¿Sirve para mi rubro?</summary><p>Lo probamos en ropa, cosmética, gastronomía, accesorios y servicios. Para otros rubros, el libro te enseña a escribir tu propio "agregado" en dos líneas.</p></details>
+      <details><summary>¿La IA va a inventar precios o promociones?</summary><p>El método tiene reglas para que use solo los datos de tu ficha. Si falta algo, te lo marca con [COMPLETAR] para que lo pongas vos. Igual, vos revisás todo antes de publicar o enviar.</p></details>
+      <details><summary>¿Me deja las publicaciones diseñadas?</summary><p>Te deja el plan del mes, los textos, los guiones y las respuestas. Las fotos y el diseño los hacés vos, y el libro te enseña a hacerlo rápido con el celular y Canva gratis.</p></details>
+      <details><summary>¿Cuánto tiempo me lleva?</summary><p>La IA escribe el mes en pocos minutos. Leer, completar y ordenar te lleva una tarde (estimamos de 1 h 30 a 2 h 30). Después, un rato por semana.</p></details>
+      <details><summary>¿Cómo lo recibo?</summary><p>Apenas se acredita el pago, te llega un mail con el acceso al ebook, los videos, los pedidos para copiar y los 5 regalos. Lo descargás y lo usás desde el celular.</p></details>
+      <details><summary>¿Y si no me sirve?</summary><p>Tenés 7 días de garantía. Si no te sirve, escribinos y te devolvemos el 100&nbsp;%.</p></details>
+      <details><summary>¿Me garantiza que voy a vender más?</summary><p>No, y desconfiá de quien te lo garantice. Te da tiempo y orden: saber qué publicar y qué responder, con textos de tu negocio. Las ventas dependen también de tu producto, tu precio y tu público.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · GARANTÍA + CIERRE -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="guarantee">
+      <div class="seal"><b>7</b><span>DÍAS</span></div>
+      <div><h3>Garantía de 7 días, sin vueltas</h3><p>Probá el método con tu negocio. Si en 7 días sentís que no te sirve, te devolvemos el 100&nbsp;% de lo que pagaste. El riesgo lo corremos nosotros.</p></div>
+    </div>
+    <div class="final">
+      <h2>Este mes, que la IA escriba con vos</h2>
+      <p>Tu mes de publicaciones planificado y escrito, y tus respuestas de venta para WhatsApp, en una tarde. Con IA gratis y desde tu celular.</p>
+      <a class="btn js-buy" href="#oferta">Quiero empezar hoy <small>AR$ <span class="js-price">19.990</span> · acceso inmediato</small></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>Vendé Más con IA</b> · Producto digital (ebook + videos + bonos).</p>
+    <p>Los resultados dependen de cada negocio y no se garantizan ventas ni ingresos. Los ejemplos corresponden a negocios de prueba (simulados). ChatGPT, Gemini, WhatsApp, Instagram y Canva son marcas de sus respectivos dueños; este producto no está afiliado a ninguna de ellas.</p>
+  </div>
+</footer>
+
+<!-- Barra de compra fija -->
+<div class="buybar"><div class="t">Vendé Más con IA<b>AR$ <span class="js-price">19.990</span></b></div><a class="btn js-buy" href="#oferta">Lo quiero</a></div>
+
+<script>
+(function(){
+  var C = window.VMIA || {};
+  var fmt = function(n){ return Number(n).toLocaleString('es-AR'); };
+  document.querySelectorAll('.js-price').forEach(function(e){ e.textContent = fmt(C.precio || 19990); });
+  if (C.precioRegular && C.precioRegular > C.precio) {
+    document.getElementById('price-reg').textContent = fmt(C.precioRegular);
+    document.getElementById('price-old').hidden = false;
+    document.getElementById('off-badge').textContent = Math.round((1 - C.precio / C.precioRegular) * 100) + '% OFF';
+  }
+  // Botones de compra: van al checkout si está configurado; si no, a la oferta.
+  // Los parámetros del anuncio (utm_*, fbclid) pasan al checkout para medir de qué anuncio vino la venta.
+  var destino = C.checkoutUrl;
+  if (destino && location.search) {
+    var q = new URLSearchParams(location.search), pasar = new URLSearchParams();
+    q.forEach(function(v, k){ if (/^utm_|^fbclid$/.test(k)) pasar.append(k, v); });
+    if (pasar.toString()) destino += (destino.indexOf('?') < 0 ? '?' : '&') + pasar.toString();
+  }
+  document.querySelectorAll('.js-buy').forEach(function(a){
+    if (destino) { a.href = destino; }
+    a.addEventListener('click', function(){
+      if (window.fbq) fbq('track', 'InitiateCheckout', {value: C.precio, currency: 'ARS'});
+    });
+  });
+  // Cuenta regresiva SOLO si hay una fecha real de fin de lanzamiento.
+  if (C.finLanzamiento) {
+    var end = new Date(C.finLanzamiento).getTime();
+    var box = document.getElementById('count'), top = document.getElementById('cd-top');
+    var tick = function(){
+      var s = Math.max(0, Math.floor((end - Date.now()) / 1000));
+      if (s <= 0) { box.hidden = true; top.hidden = true; return; }
+      var d = Math.floor(s / 86400), h = Math.floor(s % 86400 / 3600), m = Math.floor(s % 3600 / 60), ss = s % 60;
+      var p = function(x){ return (x < 10 ? '0' : '') + x; };
+      document.getElementById('c-d').textContent = d; document.getElementById('c-h').textContent = p(h);
+      document.getElementById('c-m').textContent = p(m); document.getElementById('c-s').textContent = p(ss);
+      top.textContent = 'termina en ' + (d ? d + 'd ' : '') + p(h) + ':' + p(m) + ':' + p(ss);
+      box.hidden = false; top.hidden = false;
+    };
+    tick(); setInterval(tick, 1000);
+  }
+})();
+</script>
+<script>
+/* Entrada suave de tarjetas al hacer scroll. Sin JS o sin IntersectionObserver, todo queda visible. */
+(function(){
+  if (!('IntersectionObserver' in window)) return;
+  var items = document.querySelectorAll('.pain, .step, .split-col, .benefit, .col, .bonus, .test, .guarantee');
+  if (!items.length) return;
+  document.documentElement.classList.add('js-reveal');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin: '0px 0px -8% 0px'});
+  items.forEach(function(el){ el.classList.add('reveal'); io.observe(el); });
+})();
+</script>
+<script>
+/* Galerías en movimiento: 01 y 03 de izquierda a derecha, 02 y 04 de derecha a izquierda. */
+(function(){
+  var VELOCIDAD = 28; // px por segundo: lento y constante
+  var reducir = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.cat .grid3, .cat .hscroll').forEach(function(g, i){
+    var imgs = Array.prototype.slice.call(g.querySelectorAll('img'));
+    var track = document.createElement('div'); track.className = 'mq-track';
+    var copia = function(im){ var c = im.cloneNode(true); c.alt = ''; c.setAttribute('aria-hidden', 'true'); return c; };
+    imgs.forEach(function(im){ track.appendChild(im); });
+    g.className = 'marquee' + (i % 2 === 0 ? ' a-derecha' : '');
+    g.appendChild(track);
+    if (!reducir) {
+      // la mitad de la cinta tiene que cubrir todo el ancho visible; después se duplica para que el ciclo no se corte
+      for (var lote = 0; lote < 8 && track.scrollWidth < g.clientWidth + 40; lote++) imgs.forEach(function(im){ track.appendChild(copia(im)); });
+      Array.prototype.slice.call(track.children).forEach(function(im){ track.appendChild(copia(im)); });
+    }
+    if (!reducir) {
+      var control = document.createElement('button');
+      control.type = 'button'; control.className = 'motion-toggle';
+      control.textContent = 'Pausar galería'; control.setAttribute('aria-pressed', 'false');
+      control.addEventListener('click', function(){
+        var pausa = g.classList.toggle('pausada');
+        control.textContent = pausa ? 'Reanudar galería' : 'Pausar galería';
+        control.setAttribute('aria-pressed', String(pausa));
+      });
+      g.insertAdjacentElement('afterend', control);
+      if ('IntersectionObserver' in window) {
+        g.classList.add('fuera-vista');
+        var observador = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){ g.classList.toggle('fuera-vista', !entry.isIntersecting); });
+        }, {rootMargin:'100px'});
+        observador.observe(g);
+      }
+    }
+    var ajustar = function(){ track.style.setProperty('--mq-dur', (track.scrollWidth / 2 / VELOCIDAD) + 's'); };
+    imgs.forEach(function(im){ if (!im.complete) im.addEventListener('load', ajustar); });
+    ajustar(); window.addEventListener('resize', ajustar);
+    g.addEventListener('touchstart', function(){ g.classList.add('tocando'); }, {passive: true});
+    g.addEventListener('touchend', function(){ g.classList.remove('tocando'); });
+  });
+})();
+</script>
+</body>
+</html>
